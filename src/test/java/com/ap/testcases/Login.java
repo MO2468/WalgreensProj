@@ -4,6 +4,7 @@ import java.io.IOException;
 
 
 import org.openqa.selenium.interactions.Actions;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -24,8 +25,7 @@ public class Login extends TestBase{
 	public void login (){
 		driver.get(propt.getProperty("url"));
 		HomePage hp = new HomePage(driver);
-	//	Actions a = new Actions(driver);
-	//	a.moveToElement(hp.clickYourAccount()).build().perform();
+
 		hp.clickYourAccount().click();
 		hp.clickSignIn().click();
 		SignInPage sip = new SignInPage(driver);
