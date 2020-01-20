@@ -15,8 +15,8 @@ public class HomePage {
 	WebElement youraccountbutton;
 	@FindBy(xpath="//*[contains(text(),'Sign in')]")
 	WebElement signinbutton;
-	@FindBy()
-	WebElement c;
+	@FindBy(xpath="//*[contains(text(),'Rx Refills')]")
+	WebElement rxrefillbutton;
 	@FindBy()
 	WebElement d;
 	@FindBy()
@@ -31,4 +31,8 @@ public class HomePage {
 	public WebElement clickSignIn(){
 		return signinbutton;
 	}
+	public WebElement clickRxRefillButton(){
+		return rxrefillbutton;
+	}
+
 }	

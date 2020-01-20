@@ -1,45 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="23495" started-at="2020-01-15T23:49:00Z" finished-at="2020-01-15T23:49:23Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="23495" started-at="2020-01-15T23:49:00Z" finished-at="2020-01-15T23:49:23Z">
-      <class name="com.ap.testcases.Login">
-        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.Login@3bfdc050]" name="initializer" is-config="true" duration-ms="14469" started-at="2020-01-15T18:49:00Z" finished-at="2020-01-15T18:49:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializer -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.ap.testcases.Login@3bfdc050]" name="login" duration-ms="8283" started-at="2020-01-15T18:49:14Z" finished-at="2020-01-15T18:49:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ap.testcases.Login@3bfdc050]" name="tearDown" is-config="true" duration-ms="715" started-at="2020-01-15T18:49:23Z" finished-at="2020-01-15T18:49:23Z">
-=======
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13271" started-at="2020-01-12T18:37:01Z" finished-at="2020-01-12T18:37:15Z">
+  <suite name="Default suite" duration-ms="19299" started-at="2020-01-20T01:13:37Z" finished-at="2020-01-20T01:13:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13271" started-at="2020-01-12T18:37:01Z" finished-at="2020-01-12T18:37:15Z">
-      <class name="com.ap.testcases.Login">
-        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.Login@3ac3fd8b]" name="initializer" is-config="true" duration-ms="9753" started-at="2020-01-12T13:37:01Z" finished-at="2020-01-12T13:37:11Z">
+    <test name="Default test" duration-ms="19299" started-at="2020-01-20T01:13:37Z" finished-at="2020-01-20T01:13:56Z">
+      <class name="com.ap.testcases.HomePageTests">
+        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.HomePageTests@3ac3fd8b]" name="initializer" is-config="true" duration-ms="9840" started-at="2020-01-19T20:13:37Z" finished-at="2020-01-19T20:13:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializer -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.ap.testcases.Login@3ac3fd8b]" name="login" duration-ms="2869" started-at="2020-01-12T13:37:11Z" finished-at="2020-01-12T13:37:14Z">
+        <test-method status="PASS" signature="validateRxRefillLinks()[pri:0, instance:com.ap.testcases.HomePageTests@3ac3fd8b]" name="validateRxRefillLinks" duration-ms="8883" started-at="2020-01-19T20:13:47Z" finished-at="2020-01-19T20:13:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ap.testcases.Login@3ac3fd8b]" name="tearDown" is-config="true" duration-ms="641" started-at="2020-01-12T13:37:14Z" finished-at="2020-01-12T13:37:15Z">
->>>>>>> 14942f4f456feeeb79763560d3aa55e6d8ba54e8
+        </test-method> <!-- validateRxRefillLinks -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ap.testcases.HomePageTests@3ac3fd8b]" name="tearDown" is-config="true" duration-ms="567" started-at="2020-01-19T20:13:56Z" finished-at="2020-01-19T20:13:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ap.testcases.Login -->
+      </class> <!-- com.ap.testcases.HomePageTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
