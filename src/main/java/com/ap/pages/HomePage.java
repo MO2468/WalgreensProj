@@ -17,12 +17,13 @@ public class HomePage {
 	WebElement signinbutton;
 	@FindBy(xpath="//*[contains(text(),'Rx Refills')]")
 	WebElement rxrefillbutton;
-	@FindBy()
-	WebElement d;
-	@FindBy()
-	WebElement e;
-	@FindBy()
-	WebElement f;
+	@FindBy(xpath="//input[@id='ntt-placeholder']")
+	WebElement searchBox;
+	@FindBy(xpath="//*[@type='submit']")
+	WebElement clickSearch;
+	@FindBy(id="add-to-cart-btncompare_sku388792")
+	WebElement addToCart;
+	
 	
 	
 	public WebElement clickYourAccount(){
@@ -34,5 +35,17 @@ public class HomePage {
 	public WebElement clickRxRefillButton(){
 		return rxrefillbutton;
 	}
+	public WebElement clickSearchBoxtoType(){
+		return searchBox;
+	}
+	public WebElement clicktoSearch(){
+		return clickSearch;
+	}
 
+	public WebElement clicktoAdd(){
+		return addToCart;
+	}
+	
+	
+	
 }	
