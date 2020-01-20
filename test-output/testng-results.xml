@@ -1,45 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23495" started-at="2020-01-15T23:49:00Z" finished-at="2020-01-15T23:49:23Z">
+  <suite name="Default suite" duration-ms="13016" started-at="2020-01-20T00:26:20Z" finished-at="2020-01-20T00:26:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23495" started-at="2020-01-15T23:49:00Z" finished-at="2020-01-15T23:49:23Z">
-      <class name="com.ap.testcases.Login">
-        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.Login@3bfdc050]" name="initializer" is-config="true" duration-ms="14469" started-at="2020-01-15T18:49:00Z" finished-at="2020-01-15T18:49:14Z">
+    <test name="Default test" duration-ms="13016" started-at="2020-01-20T00:26:20Z" finished-at="2020-01-20T00:26:33Z">
+      <class name="com.ap.testcases.Links">
+        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.Links@43a25848]" name="initializer" is-config="true" duration-ms="10039" started-at="2020-01-19T19:26:20Z" finished-at="2020-01-19T19:26:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializer -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.ap.testcases.Login@3bfdc050]" name="login" duration-ms="8283" started-at="2020-01-15T18:49:14Z" finished-at="2020-01-15T18:49:23Z">
+        <test-method status="FAIL" signature="linkHomepage()[pri:0, instance:com.ap.testcases.Links@43a25848]" name="linkHomepage" duration-ms="2962" started-at="2020-01-19T19:26:30Z" finished-at="2020-01-19T19:26:33Z">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-R117LAU', ip: '192.168.1.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\mohammed\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65276}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 45625db4f6f282f24f2de3dab0e246b5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-R117LAU', ip: '192.168.1.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\mohammed\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65276}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 45625db4f6f282f24f2de3dab0e246b5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:128)
+	at com.ap.testcases.Links.linkHomepage(Links.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ap.testcases.Login@3bfdc050]" name="tearDown" is-config="true" duration-ms="715" started-at="2020-01-15T18:49:23Z" finished-at="2020-01-15T18:49:23Z">
-=======
-<testng-results skipped="0" failed="0" total="1" passed="1">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="13271" started-at="2020-01-12T18:37:01Z" finished-at="2020-01-12T18:37:15Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="13271" started-at="2020-01-12T18:37:01Z" finished-at="2020-01-12T18:37:15Z">
-      <class name="com.ap.testcases.Login">
-        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.Login@3ac3fd8b]" name="initializer" is-config="true" duration-ms="9753" started-at="2020-01-12T13:37:01Z" finished-at="2020-01-12T13:37:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializer -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.ap.testcases.Login@3ac3fd8b]" name="login" duration-ms="2869" started-at="2020-01-12T13:37:11Z" finished-at="2020-01-12T13:37:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ap.testcases.Login@3ac3fd8b]" name="tearDown" is-config="true" duration-ms="641" started-at="2020-01-12T13:37:14Z" finished-at="2020-01-12T13:37:15Z">
->>>>>>> 14942f4f456feeeb79763560d3aa55e6d8ba54e8
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ap.testcases.Login -->
+        </test-method> <!-- linkHomepage -->
+      </class> <!-- com.ap.testcases.Links -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
