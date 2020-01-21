@@ -34,9 +34,9 @@ public class FindStoreLocationTest extends TestBase{
 		
 		hp.getfindaStore().click();
 		lp.getUpdateLocation().click();
-		wait.ignoring(StaleElementReferenceException.class).until(ExpectedConditions.textToBePresentInElement(lp.getLocationBox(), "11230"));
-		lp.getLocationBox().sendKeys("11230");
-		lp.getSearchButton().click();
+		//wait.ignoring(StaleElementReferenceException.class).until(ExpectedConditions.textToBePresentInElement(lp.getLocationBox(), "11230"));
+		//lp.getLocationBox().sendKeys("11230");
+		//lp.getSearchButton().click();
 	}
 	
 	@Test
