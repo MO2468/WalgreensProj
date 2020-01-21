@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19299" started-at="2020-01-20T01:13:37Z" finished-at="2020-01-20T01:13:56Z">
+  <suite name="Default suite" duration-ms="14183" started-at="2020-01-20T19:34:23Z" finished-at="2020-01-20T19:34:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19299" started-at="2020-01-20T01:13:37Z" finished-at="2020-01-20T01:13:56Z">
-      <class name="com.ap.testcases.HomePageTests">
-        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.HomePageTests@3ac3fd8b]" name="initializer" is-config="true" duration-ms="9840" started-at="2020-01-19T20:13:37Z" finished-at="2020-01-19T20:13:47Z">
+    <test name="Default test" duration-ms="14183" started-at="2020-01-20T19:34:23Z" finished-at="2020-01-20T19:34:38Z">
+      <class name="com.ap.testcases.TestCaseAveeno">
+        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.TestCaseAveeno@3abbfa04]" name="initializer" is-config="true" duration-ms="5064" started-at="2020-01-20T19:34:23Z" finished-at="2020-01-20T19:34:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializer -->
-        <test-method status="PASS" signature="validateRxRefillLinks()[pri:0, instance:com.ap.testcases.HomePageTests@3ac3fd8b]" name="validateRxRefillLinks" duration-ms="8883" started-at="2020-01-19T20:13:47Z" finished-at="2020-01-19T20:13:56Z">
+        <test-method status="PASS" signature="clickSearchBoxtoType()[pri:0, instance:com.ap.testcases.TestCaseAveeno@3abbfa04]" name="clickSearchBoxtoType" duration-ms="9062" started-at="2020-01-20T19:34:28Z" finished-at="2020-01-20T19:34:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateRxRefillLinks -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ap.testcases.HomePageTests@3ac3fd8b]" name="tearDown" is-config="true" duration-ms="567" started-at="2020-01-19T20:13:56Z" finished-at="2020-01-19T20:13:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ap.testcases.HomePageTests -->
+        </test-method> <!-- clickSearchBoxtoType -->
+      </class> <!-- com.ap.testcases.TestCaseAveeno -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
