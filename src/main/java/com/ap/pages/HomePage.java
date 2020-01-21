@@ -1,5 +1,7 @@
 package com.ap.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,6 +25,8 @@ public class HomePage {
 	WebElement clickSearch;
 	@FindBy(id="add-to-cart-btncompare_sku388792")
 	WebElement addToCart;
+	@FindBy(xpath="//*[contains(@data-kidx, 'm-1-')]")
+	List <WebElement> rxrefillLinks;
 	
 	
 	
@@ -40,6 +44,9 @@ public class HomePage {
 	}
 	public WebElement clicktoSearch(){
 		return clickSearch;
+	}
+	public List<WebElement> rxRefillLinks(){
+		return rxrefillLinks;
 	}
 
 	public WebElement clicktoAdd(){
