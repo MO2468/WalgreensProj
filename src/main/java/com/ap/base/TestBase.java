@@ -2,7 +2,6 @@ package com.ap.base;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -18,9 +17,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class TestBase {
 	public WebDriver driver;
 	public Properties propt;
-  //Data
-	public String[] rxrefilllvl2text = {"Refill Prescriptions","Rx Status","Auto Refill","Request New Rx","Transfer Rx","Rx Settings","Print Rx Records","Drug Information","More Pharmacy Services ›"};
-	public String[] rxrefilllvl3text = {"Pharmacy Chat","Rx Refill Reminders","Family Prescriptions","Prescription Savings Club","Home Delivery Pharmacy (Formerly Mail Service)","Specialty Pharmacy","Easy Rx Delivery","Medication Compounding","Medication Flavoring","Convenience Services","Nebulizer Services"};
+
+	
 	
 
 	public void propFile ()
@@ -73,17 +71,12 @@ public class TestBase {
 		return driver;
 	}
 	
-	public void getScreenShot(String result) {
-	try{	
+	public void getScreenShot(String result) throws IOException {
+
 	File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	String currentDir = System.getProperty("user.dir");
 	FileUtils.copyFile(src, new File(currentDir+"/screenshot/"+System.currentTimeMillis()+".png"));
-	}catch(IOException e)
-	{
-		e.printStackTrace();
-	}
-	
-	}
 	
 	
+	}	
 	}

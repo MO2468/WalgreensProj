@@ -29,8 +29,7 @@ public class HomePage {
 	List <WebElement> rxrefillLinkslvl2;
 	@FindBy(xpath="//*[@class='submenucatvalue'][contains(@data-kidx, 'm-1-9-')]")
 	List <WebElement> rxrefillLinkslvl3;
-	@FindBy(xpath="//*[@data-kidx='m-1-9']")
-	WebElement rxrefillmoreservicedd;
+
 	
 	public WebElement clickYourAccount(){
 		return youraccountbutton;
@@ -52,9 +51,6 @@ public class HomePage {
 	}
 	public List<WebElement> rxRefillLinkslvl3(){
 		return rxrefillLinkslvl3;
-	}
-	public WebElement rxRefillMorePharmacydd(){
-		return rxrefillmoreservicedd;
 	}
 
 	public WebElement clicktoAdd(){
