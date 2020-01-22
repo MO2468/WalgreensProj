@@ -24,28 +24,10 @@ public class HomePageTests extends TestBase{
 		driver=initialization();
 
 	}
+	
+	
+	
 	@Test(enabled=true)
-	public void validateRxRefillLinks() throws InterruptedException{
-		driver.get(propt.getProperty("url"));
-		hp = new HomePage(driver);
-		WebDriverWait wait = new WebDriverWait(driver, 15);//without explicit, its saying stale element
-		Actions a = new Actions(driver);
-		a.moveToElement(hp.clickRxRefillButton()).build().perform();
-		wait.until(ExpectedConditions.visibilityOf(hp.clickRxRefillButton()));
-		Thread.sleep(2000);//To visually check if hovering is occuring
-		for (int i=0;i<hp.rxRefillLinks().size();i++){
-			a.moveToElement(hp.rxRefillLinks().get(i)).build().perform();
-			wait.until(ExpectedConditions.visibilityOf(hp.rxRefillLinks().get(i)));
-			
-			Thread.sleep(2000);
-			
-			
-		}
-		
-	
-	}
-	
-	@Test(enabled=false)
 	public void login (){
 		driver.get(propt.getProperty("url"));
 		hp = new HomePage(driver);

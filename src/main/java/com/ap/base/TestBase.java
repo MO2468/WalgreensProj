@@ -18,7 +18,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class TestBase {
 	public WebDriver driver;
 	public Properties propt;
+  //Data
+	public String[] rxrefilllvl2text = {"Refill Prescriptions","Rx Status","Auto Refill","Request New Rx","Transfer Rx","Rx Settings","Print Rx Records","Drug Information","More Pharmacy Services ›"};
+	public String[] rxrefilllvl3text = {"Pharmacy Chat","Rx Refill Reminders","Family Prescriptions","Prescription Savings Club","Home Delivery Pharmacy (Formerly Mail Service)","Specialty Pharmacy","Easy Rx Delivery","Medication Compounding","Medication Flavoring","Convenience Services","Nebulizer Services"};
 	
+
 	public void propFile ()
 	{
 		propt =new Properties();
@@ -64,7 +68,6 @@ public class TestBase {
 		}
 		
 		driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
-		driver.get(propt.getProperty("url"));
 		driver.manage().window().maximize();
 		
 		return driver;
