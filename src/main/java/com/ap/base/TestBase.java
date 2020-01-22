@@ -16,34 +16,55 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class TestBase {
-	public static Properties propt;
-	public static WebDriver driver;
-	
-	//Data
+	public WebDriver driver;
+	public Properties propt;
+  //Data
 	public String[] rxrefilllvl2text = {"Refill Prescriptions","Rx Status","Auto Refill","Request New Rx","Transfer Rx","Rx Settings","Print Rx Records","Drug Information","More Pharmacy Services ›"};
 	public String[] rxrefilllvl3text = {"Pharmacy Chat","Rx Refill Reminders","Family Prescriptions","Prescription Savings Club","Home Delivery Pharmacy (Formerly Mail Service)","Specialty Pharmacy","Easy Rx Delivery","Medication Compounding","Medication Flavoring","Convenience Services","Nebulizer Services"};
 	
-	
-	public WebDriver initialization() throws IOException{
-		propt = new Properties();
-		
+
+	public void propFile ()
+	{
+		propt =new Properties();
 		try {
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/ap/config/config.properties");
-		propt.load(fis);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/ap/config/config.properties");
+			propt.load(fis);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		
+	}
+	
+	public void machineType ()
+	{
+		propFile();
+		String machineName = propt.getProperty("machine");
+		
+		if (machineName.equalsIgnoreCase("mac"))
+		{
+			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir")+"/src/resources/drivers/chromedriver 2"));
+		} 
+		else
+		{
+			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir")+"/src/resources/drivers/chromedriver.exe"));
 		}
+		
+	}
+	
+	public WebDriver initialization() {
+		
+		propFile();
 		
 		String browserName = propt.getProperty("browser");
 		if(browserName.equalsIgnoreCase("chrome")){
-			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir")+"/src/resources/drivers/chromedriver.exe"));
-			 driver  = new ChromeDriver();
+			machineType();
+			driver  = new ChromeDriver();
 		}else if (browserName.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir")+"/src/resources/drivers/geckodriver.exe"));
-			 driver  = new FirefoxDriver();
+			machineType();
+			driver  = new FirefoxDriver();
 		}else if(browserName.equalsIgnoreCase("IE")) {
-			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir")+"/src/resources/drivers/iedriver.exe"));
-			 driver  = new InternetExplorerDriver();
+			machineType();
+			driver  = new InternetExplorerDriver();
 		}
 		
 		driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
@@ -52,9 +73,17 @@ public class TestBase {
 		return driver;
 	}
 	
-	public void getScreenShot(String result) throws IOException{
+	public void getScreenShot(String result) {
+	try{	
 	File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	String currentDir = System.getProperty("user.dir");
 	FileUtils.copyFile(src, new File(currentDir+"/screenshot/"+System.currentTimeMillis()+".png"));
+	}catch(IOException e)
+	{
+		e.printStackTrace();
 	}
+	
+	}
+	
+	
 	}
