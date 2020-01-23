@@ -35,7 +35,8 @@ public class HomePage {
 	List <WebElement> rxrefillLinkslvl3;
 	@FindBy(xpath="//*[@data-kidx='m-7']")
 	WebElement BalanceReward;
-//"//li[@id='menu-br']//span[text()='Balance Rewards']"
+	@FindBy(xpath="//*[@id='Homepage_Rx_CT']/div[3]/div/ul/li[4]/a")
+	WebElement schedule;
 	
 	public WebElement clickYourAccount(){
 		return youraccountbutton;
@@ -71,7 +72,9 @@ public class HomePage {
 	public WebElement getBalanceReward(){
 		return BalanceReward;
 	}
-	
+	public WebElement scheduler(){
+		return schedule;
+	}
 	
 	
 }	

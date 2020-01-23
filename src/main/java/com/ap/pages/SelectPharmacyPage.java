@@ -17,13 +17,11 @@ public SelectPharmacyPage(WebDriver driver){
 @FindBy(xpath="//*[@id='search-address']")
 WebElement enterAddress;
 
-
-
 @FindBy(xpath="//*[@id='search-result']/section[1]/section[1]/span[2]/button")
 WebElement searchButton;
 
-@FindBy(xpath="//*[@id='radio_0']")
-WebElement C;
+@FindBy(css="button#con")
+WebElement radiobutton;
 
 public WebElement enterAddress(){
 	
@@ -34,7 +32,9 @@ public WebElement clickSearchButton(){
 	
 	return searchButton;
 }
-
+public WebElement clickRadio(){
+	return radiobutton;
+}
 
 
 
