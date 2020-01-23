@@ -24,6 +24,7 @@ public class HomePageTests extends TestBase{
 		driver=initialization();
 
 	}
+<<<<<<< HEAD
 	@Test(priority=2)
 	public void validateRxRefillLinks() throws InterruptedException{
 		driver.get(propt.getProperty("url"));
@@ -43,6 +44,12 @@ public class HomePageTests extends TestBase{
 	}
 	
 	@Test(priority=1)
+=======
+	
+	
+	
+	@Test(enabled=true)
+>>>>>>> bf84bd1af57198ec8558a3a9c5c637c2884337e4
 	public void login (){
 		driver.get(propt.getProperty("url"));
 		hp = new HomePage(driver);

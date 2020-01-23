@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14183" started-at="2020-01-20T19:34:23Z" finished-at="2020-01-20T19:34:38Z">
+  <suite name="Default suite" duration-ms="63964" started-at="2020-01-22T03:47:24Z" finished-at="2020-01-22T03:48:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14183" started-at="2020-01-20T19:34:23Z" finished-at="2020-01-20T19:34:38Z">
-      <class name="com.ap.testcases.TestCaseAveeno">
-        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.TestCaseAveeno@3abbfa04]" name="initializer" is-config="true" duration-ms="5064" started-at="2020-01-20T19:34:23Z" finished-at="2020-01-20T19:34:28Z">
+    <test name="Default test" duration-ms="63964" started-at="2020-01-22T03:47:24Z" finished-at="2020-01-22T03:48:28Z">
+      <class name="com.ap.testcases.RxRefillLinksTest">
+        <test-method status="PASS" signature="initializer()[pri:0, instance:com.ap.testcases.RxRefillLinksTest@48140564]" name="initializer" is-config="true" duration-ms="9736" started-at="2020-01-21T22:47:24Z" finished-at="2020-01-21T22:47:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializer -->
-        <test-method status="PASS" signature="clickSearchBoxtoType()[pri:0, instance:com.ap.testcases.TestCaseAveeno@3abbfa04]" name="clickSearchBoxtoType" duration-ms="9062" started-at="2020-01-20T19:34:28Z" finished-at="2020-01-20T19:34:37Z">
+        <test-method status="PASS" signature="validateRXlinksClickable()[pri:0, instance:com.ap.testcases.RxRefillLinksTest@48140564]" name="validateRXlinksClickable" duration-ms="53469" started-at="2020-01-21T22:47:34Z" finished-at="2020-01-21T22:48:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickSearchBoxtoType -->
-      </class> <!-- com.ap.testcases.TestCaseAveeno -->
+        </test-method> <!-- validateRXlinksClickable -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ap.testcases.RxRefillLinksTest@48140564]" name="tearDown" is-config="true" duration-ms="750" started-at="2020-01-21T22:48:27Z" finished-at="2020-01-21T22:48:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ap.testcases.RxRefillLinksTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

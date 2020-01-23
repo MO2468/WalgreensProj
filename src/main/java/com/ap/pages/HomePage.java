@@ -29,8 +29,13 @@ public class HomePage {
 	WebElement clickSearch;
 	@FindBy(id="add-to-cart-btncompare_sku388792")
 	WebElement addToCart;
-	
-	
+	@FindBy(xpath="//*[contains(@data-kidx, 'm-1-')]")
+	List <WebElement> rxrefillLinkslvl2;
+	@FindBy(xpath="//*[@class='submenucatvalue'][contains(@data-kidx, 'm-1-9-')]")
+	List <WebElement> rxrefillLinkslvl3;
+	@FindBy(xpath="//*[@data-kidx='m-7']")
+	WebElement BalanceReward;
+//"//li[@id='menu-br']//span[text()='Balance Rewards']"
 	
 	public WebElement clickYourAccount(){
 		return youraccountbutton;
@@ -53,9 +58,18 @@ public class HomePage {
 	public WebElement clicktoSearch(){
 		return clickSearch;
 	}
+	public List<WebElement> rxRefillLinkslvl2(){
+		return rxrefillLinkslvl2;
+	}
+	public List<WebElement> rxRefillLinkslvl3(){
+		return rxrefillLinkslvl3;
+	}
 
 	public WebElement clicktoAdd(){
 		return addToCart;
+	}
+	public WebElement getBalanceReward(){
+		return BalanceReward;
 	}
 	
 	
