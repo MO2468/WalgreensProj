@@ -29,7 +29,9 @@ public class HomePage {
 	List <WebElement> rxrefillLinkslvl2;
 	@FindBy(xpath="//*[@class='submenucatvalue'][contains(@data-kidx, 'm-1-9-')]")
 	List <WebElement> rxrefillLinkslvl3;
-
+	@FindBy(xpath="//*[@data-kidx='m-7']")
+	WebElement BalanceReward;
+//"//li[@id='menu-br']//span[text()='Balance Rewards']"
 	
 	public WebElement clickYourAccount(){
 		return youraccountbutton;
@@ -55,6 +57,9 @@ public class HomePage {
 
 	public WebElement clicktoAdd(){
 		return addToCart;
+	}
+	public WebElement getBalanceReward(){
+		return BalanceReward;
 	}
 	
 	
