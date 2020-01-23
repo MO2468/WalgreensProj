@@ -3,10 +3,8 @@ package com.ap.testcases;
 import java.io.IOException;
 
 
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -23,54 +21,31 @@ public class TestCaseAveeno extends TestBase{
 
 	}
 
-	@Test(enabled=false)
-	public void validateRxRefillLinks() throws InterruptedException{
-		driver.get(propt.getProperty("url"));
-		WHP = new HomePage(driver);
-		WebDriverWait wait = new WebDriverWait(driver, 15);//without explicit, its saying stale element
-		Actions a = new Actions(driver);
-		a.moveToElement(WHP.clickRxRefillButton()).build().perform();
-		wait.until(ExpectedConditions.visibilityOf(WHP.clickRxRefillButton()));
-		//Thread.sleep(5000);//To visually check if hovering is occuring
-		
-	}
-	
-	@Test(enabled=false)
-	public void login (){
-		driver.get(propt.getProperty("url"));
-		WHP = new HomePage(driver);
-
-		WHP.clickYourAccount().click();
-		WHP.clickSignIn().click();
-		sip = new SignInPage(driver);
-		String SItitle=driver.getTitle();
-		Assert.assertEquals(SItitle, "Sign In or Register to Get Started Using Walgreens.com");
-
-	
-	}
-	
 	
 	
 	@Test
-	public void clickSearchBoxtoType(){
+	public void clickSearchBoxtoType() throws InterruptedException{
 		driver.get(propt.getProperty("url"));
 		WHP = new HomePage(driver);
 		WHP.clickSearchBoxtoType().sendKeys("Aveeno oat");
-		WebDriverWait wait = new WebDriverWait(driver, 5);
 		WHP.clicktoSearch().click();
+		Thread.sleep(1000);
 		WHP.clicktoAdd().click();
-		
+		Assert.assertEquals(WHP.VerifyCartMsg().getText(), "1 item added to your cart");
+		WHP.viewCart().click();
+		Thread.sleep(500);
+		WHP.GotoCheckout().click();
+		WHP.checkOut().click();
 	}
 	
-	
-	
-	
 
-
-	/*@AfterTest
+	@AfterTest
 	public void tearDown(){
 		driver.quit();
 		driver=null;
-	}*/
+		}
 
 }
+
+
+
