@@ -13,7 +13,7 @@ public ScheduleAppointmentPage(WebDriver driver){
 }
 
 
-@FindBy(xpath="//*[@id='schedule_pharmacy']")
+@FindBy(css="button#schedule_pharmacy")
 WebElement schedulePharmacyButton;
 
 @FindBy()

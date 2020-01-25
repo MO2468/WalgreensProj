@@ -15,7 +15,7 @@ public class EnterLocationPage {
 	@FindBy(xpath="//*[@id='selectage']")
 	WebElement selectAgeDropdown;
 	
-	@FindBy( xpath="//*[@id='appt-init-address']")
+	@FindBy( id="appt-init-address")
 	WebElement enterzip;
 	
 	@FindBy(xpath="//*[@id='con']")

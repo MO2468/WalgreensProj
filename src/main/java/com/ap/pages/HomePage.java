@@ -29,13 +29,24 @@ public class HomePage {
 	WebElement clickSearch;
 	@FindBy(id="add-to-cart-btncompare_sku388792")
 	WebElement addToCart;
+	@FindBy(id="add-to-cart-btncompare_sku388792")
+	WebElement ClickaddToCart;
+	@FindBy(id="addToCart-cart-checkout")
+	WebElement ViewCart;	
+	@FindBy(xpath="//*[contains(text(),'1 item added to your cart')]")
+	WebElement getCarttitle;
+	@FindBy(id="wag-cart-proceed-to-checkout")
+	WebElement proceedtoCheckout;	
 	@FindBy(xpath="//*[contains(@data-kidx, 'm-1-')]")
 	List <WebElement> rxrefillLinkslvl2;
 	@FindBy(xpath="//*[@class='submenucatvalue'][contains(@data-kidx, 'm-1-9-')]")
 	List <WebElement> rxrefillLinkslvl3;
 	@FindBy(xpath="//*[@data-kidx='m-7']")
 	WebElement BalanceReward;
-//"//li[@id='menu-br']//span[text()='Balance Rewards']"
+	@FindBy(xpath="//*[@id='Homepage_Rx_CT']/div[3]/div/ul/li[4]/a")
+	WebElement schedule;
+	@FindBy(id="checkout_btn")
+	WebElement ClicktoCheckout;
 	
 	public WebElement clickYourAccount(){
 		return youraccountbutton;
@@ -71,7 +82,22 @@ public class HomePage {
 	public WebElement getBalanceReward(){
 		return BalanceReward;
 	}
-	
-	
+	public WebElement scheduler(){
+		return schedule;
+	}
+	public WebElement VerifyCartMsg() {
+
+		return getCarttitle;
+	}
+
+	public WebElement viewCart(){
+		return ViewCart;
+	}
+	public WebElement GotoCheckout(){
+		return proceedtoCheckout;
+	}	
+	public WebElement checkOut(){
+		return ClicktoCheckout;
+	}
 	
 }	
